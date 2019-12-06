@@ -1,0 +1,161 @@
+:-dynamic(known/3).
+top_goal(X):-
+    
+	pinzon(X).
+
+
+/*-----------Pinzones-----------*/
+
+pinzon(picogordo):-
+    
+	origen(isla_galapagos),
+  
+  	tamaño(docecm),
+    
+	tiene(pico_robusto),
+ 
+	come(semillas_grandes_y_duras),
+    
+	plumaje(negro_pardo).
+
+
+
+
+pinzon(conirrostro-hembra):-
+    
+	origen(isla_galapagos),
+    
+	tamaño(docecm),
+    
+	lugar(habitat_zona_matorral),
+    
+	come(cactus_opuntea),
+    
+	tiene(pico_rojizo),
+    
+	plumaje(pardo_veteado).
+
+
+
+
+
+pinzon(conirrostro-macho):-
+    
+	origen(isla_galapagos),
+    
+	tamaño(docecm),
+    
+	lugar(habitat_zona_matorral),
+    
+	come(cactus_opuntea),
+    
+	tiene(pico_oscuro),
+    
+	plumaje(negro).
+
+
+
+
+pinzon(picomediano-hembra):-
+    
+	origen(isla_galapagos),
+    
+	tamaño(docecm),
+    
+	tiene(pico_variable),
+    
+	plumaje(pardo).
+
+
+
+
+pinzon(picomediano-macho):-
+    
+	origen(isla_galapagos),
+    
+	tamaño(docecm),
+    
+	tiene(pico_variable),
+    
+	plumaje(liso). 
+
+
+
+
+pinzon(manglaro):-
+    
+	origen(isla_galapagos),
+    
+	tamaño(quincecm),
+    
+	lugar(habitat_manglares),
+    
+	come(insectos_larvas_arañas).
+
+
+
+
+pinzon(carpintero):-
+    
+	origen(isla_galapagos),
+    
+	tamaño(quincecm),
+    
+	utiliza(herramientas).
+
+
+
+/*-----------Origen-----------*/
+
+
+origen(isla_galapagos):-
+    
+	nacio_en(isla_galapagos).
+
+
+origen(isla_del_coco):-
+	nacio_en(isla_del_coco).
+
+/*-----------Tamaño-----------*/
+
+tamaño(docecm):-
+    
+	mide(docecm).
+
+
+
+tamaño(quincecm):-
+    
+	mide(quincecm).
+
+
+
+
+
+
+
+nacio_en(X):-
+  
+	ask(nacio_en,X).
+
+
+
+mide(X):-
+  
+	ask(mide,X),!.
+
+
+tiene(X):-
+	ask(tiene,X),!.
+
+come(X):-
+	ask(come,X),!.
+
+plumaje(X):-
+	ask(plumaje,X),!.
+
+lugar(X):-
+	ask(lugar,X),!.
+
+utiliza(X):-
+	ask(utiliza,X),!.
